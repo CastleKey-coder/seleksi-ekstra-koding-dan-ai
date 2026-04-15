@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleksi Ekstra Koding & AI</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="img/logo smp.png">
+</head>
+
+<body>
+    <div class="container">
+
+        <div id="login" class="card">
+            <h2>Login Siswa</h2>
+            <input id="nama" placeholder="Nama">
+            <select id="kelas">
+                <option value="">Pilih Kelas</option>
+                <option>7A</option>
+                <option>7B</option>
+                <option>7C</option>
+                <option>8A</option>
+                <option>8B</option>
+                <option>8C</option>
+                <option>9A</option>
+                <option>9B</option>
+                <option>9C</option>
+            </select>
+            <button onclick="login()">Masuk</button>
+        </div>
+
+        <div id="tes" class="card hidden">
+            <div id="timer" class="timer"></div>
+            <h3 id="judul"></h3>
+            <form id="form"></form>
+            <button onclick="next()">Next</button>
+        </div>
+
+        <div id="selesai" class="card hidden">
+            <h2>Ujian Selesai</h2>
+            <p id="hasil"></p>
+            <button id="btnLanjut" class="hidden" onclick="showForm()">Isi Form Lanjutan</button>
+        </div>
+
+        <div id="formLanjutan" class="card hidden">
+            <h2>Form Lanjutan</h2>
+            <input placeholder="Nama Lengkap">
+            <input placeholder="NIS">
+            <input placeholder="Kelas">
+            <p>Apakah anda punya Laptop/PC di rumah?</p>
+            <div class="radio-group">
+                <label><input type="radio" name="device"> Ya</label>
+                <label><input type="radio" name="device"> Tidak</label>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="leaderboard" class="card hidden">
+        <h2>Leaderboard</h2>
+        <table id="rankTable">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Nama</th>
+                    <th>Kelas</th>
+                    <th>Skor</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
